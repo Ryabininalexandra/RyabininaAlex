@@ -1,1 +1,0 @@
-Ryabinina portfoli project
