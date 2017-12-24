@@ -1,0 +1,212 @@
+/*********************************/
+/* Приклад коду властивостей для */
+/* навігаційної панелі .navbar   */
+/* з ідентифікатором #mainNav    */
+/*********************************/
+
+#mainNav {
+    /**margin-top: 1.5rem;*/ /* Navbar зміщений вниз на 1.5rem за рахунок відступу зверху */
+    padding: 0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+/* Властивості Navbar після початку скролу */
+/* У Navbar з'являється додатковий клас .navbar-shrink */
+/* зникає відступ зверху */
+/* та змінюється колір фону */
+
+#mainNav.navbar-shrink {
+    margin-top: 0;
+    background: #f8f9fa;
+}
+
+.white {
+    background: #f8f9fa;
+}
+
+/* Властивості Лого */
+#mainNav .navbar-brand { /* Зовнішні відступи для Лого */
+    margin: .5rem 0 .75rem; /* зверху - 0.5rem, знизу - 0.75rem, справа та зліва - 0 */
+}
+
+/* Властивості "гамбургер-меню" */
+#mainNav .navbar-toggler {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    /*    background-color: #444;*/
+}
+
+.fa-bars:before {
+    color: #101010;
+    font-size: 1.5rem;
+}
+
+/* Кінець властивостей "гамбургер-меню" */
+
+/* Властивості лінків меню */
+#mainNav .nav-link {
+    background: #f8f9fa;
+    border-radius: .25rem;
+    color: #101010;
+    margin-left: 1rem;
+    padding: .2rem .75rem;
+    text-align: right;
+}
+
+#mainNav .nav-link:hover {
+    color: #fff;
+    background: #101010;
+}
+
+#mainNav .active.nav-link:hover {
+    color: #a39a93;
+    background: #f8f9fa;
+}
+
+#mainNav .nav-link.active {
+    color: #f8f9fa;
+    background: #a39a93;
+}
+
+/* Кінець властивостей лінків меню */
+
+/* Зміна вигляду навігаційної панелі для екранів менше 767px */
+/* працює у парі з додатковим класом для .navbar */
+/* .navbar-expand-md. УВАГА! При зміні на клас .navbar-expand-sm */
+/* або .navbar-expand-lg необхідно змінити точку breakpoints на  */
+/* 565px або 991px відповідно до обраного класу  */
+
+@media screen and (max-width: 767px) {
+
+    /* Зміна властивостей усіх контейнерів всередині #page-top */
+    #page-top .container {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Зміна властивостей контейнера всередині */
+    /* навігаційної панелі #mainNav */
+    #mainNav .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Зміна властивостей лінків меню */
+    #mainNav .navbar-nav {
+        background-color: #f8f9fa; /* Загальний колір фон під усіма лінками */
+    }
+
+    #mainNav .nav-link {
+        border-radius: 0;
+        margin: 0;
+    }
+
+    #mainNav .nav-link {
+        padding: .5rem 1.5rem;
+        border-top: 1px solid #666;
+    }
+
+    #mainNav .nav-link,
+    #mainNav .nav-link.active,
+    #mainNav.navbar-shrink .nav-link:hover {
+        background: transparent;
+    }
+
+    #mainNav .nav-link.active,
+    #mainNav.navbar-shrink .nav-link:hover {
+        background: #666;
+    }
+
+    /* Кінець змінам властивостей лінків меню */
+    /* Зміна властивостей "гамбургер-меню" */
+    #mainNav .navbar-toggler {
+        margin-right: 15px;
+    }
+
+    /* Зміна властивостей Лого */
+    #mainNav .navbar-brand {
+        margin-left: 15px;
+    }
+}
+
+.animate-hamburger{
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.animate-hamburger span{
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+
+.animate-hamburger span {
+    background: #666;
+}
+/* Icon 3*/
+
+.animate-hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.animate-hamburger span:nth-child(2), .animate-hamburger span:nth-child(3) {
+    top: 10px;
+}
+
+.animate-hamburger span:nth-child(4) {
+    top: 20px;
+}
+
+.animate-hamburger.open span:nth-child(1) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.animate-hamburger.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.animate-hamburger.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.animate-hamburger.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}

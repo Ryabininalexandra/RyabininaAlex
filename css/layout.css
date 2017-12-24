@@ -1,0 +1,388 @@
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.container,
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Плавні зміни властивостей лінків */
+a {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+/*************************************/
+/* Зміни CSS коду розпочинати звідси */
+/*************************************/
+
+section {
+    min-height: 100vh; /*!!! Тимчасово для відладки !!! Висота секцій рівна висоті екрану */
+    padding: 50px 0 50px 0; /*Внітрішні відступи зверху та знизу у секціях <section> */
+}
+
+#s2, #s3, #s4 {
+    background-color: #fff; /* Колір фону для секцій #s2, #s4 */
+}
+
+a {
+    color: #a39a93; /* Колір текстових лінків */
+}
+
+a:focus,
+a:hover {
+    color: #a39a93; /* Колір текстових лінків для псевдокласів */
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+#s1 .row {
+    padding: 50px 0 0;
+    justify-content: center; /* Контейнери всередині header .row центруються по основній осі (горизонтально) */
+    align-items: center; /* Контейнер всередині header .row центрується по поперечній осі (вертикально) */
+}
+
+#s1 i {
+    margin-bottom: 20px;
+}
+.about{
+    justify-content: center; /* Контейнери всередині header .row центруються по основній осі (горизонтально) */
+    align-items: center; /* Контейнер всередині header .row центрується по поперечній осі (вертикально) */
+}
+#about h2 {
+    padding-top: 25px;
+    justify-content: center; /* Контейнери всередині header .row центруються по основній осі (горизонтально) */
+    align-items: center; /* Контейнер всередині header .row центрується по поперечній осі (вертикально) */
+}
+
+#about section > p {
+    font-size: 16px;
+    margin: 24px;
+    display: inline-block;
+}
+
+.fa {
+    color: black;
+}
+
+.hdn {
+    height: 1px;
+}
+
+#contact {
+    justify-content: center; /* Контейнери всередині header .row центруються по основній осі (горизонтально) */
+    align-items: center; /* Контейнер всередині header .row центрується по поперечній осі (вертикально) */
+    padding-top: 84px;
+    background: #fff;
+}
+
+#contact h2 {
+    justify-content: center; /* Контейнери всередині header .row центруються по основній осі (горизонтально) */
+    align-items: center; /* Контейнер всередині header .row центрується по поперечній осі (вертикально) */
+}
+
+#contact-title {
+    font-size: 16px;
+    text-align: center;
+    justify-content: center; /* Контейнери всередині header .row центруються по основній осі (горизонтально) */
+    align-items: center; /* Контейнер всередині header .row центрується по поперечній осі (вертикально) */
+}
+
+#contact p {
+    font-size: 18px;
+    padding-bottom: 25px;
+}
+
+#contact .button {
+    height: 35px;
+    border: 1px solid #a39a93;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 1px #fff;
+    -moz-box-shadow: 0 1px 1px #fff;
+    box-shadow: 0 1px 1px #fff;
+    font: bold 11px Sans-Serif;
+    padding: 6px 15px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background: #F2F2F2;
+}
+
+.button:hover, .button:focus {
+    border-color: #999;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), inset 0 0 3px #fff;
+}
+
+.button:active {
+    border: 1px solid #AAA;
+    border-bottom-color: #CCC;
+    border-top-color: #999;
+    -webkit-box-shadow: inset 0 1px 2px #aaa;
+    -moz-box-shadow: inset 0 1px 2px #aaa;
+    box-shadow: inset 0 1px 2px #aaa;
+
+}
+
+#contact .button:active {
+    opacity: 0.5;
+}
+
+/** gallery*/
+#portfolio {
+    padding-top: 10px;
+    justify-content: center; /* Контейнери всередині header .row центруються по основній осі (горизонтально) */
+    align-items: center; /* Контейнер всередині header .row центрується по поперечній осі (вертикально) */
+}
+
+#portfolio h2 {
+    margin-top: 5vh;
+}
+
+.gallery_item {
+    opacity: 1;
+    margin-bottom: 15px;
+    background: #FFF;
+    /*height: 250px;*/
+}
+
+.contain .gallery_item {
+    transition: all .2s ease-in-out;
+}
+
+/** hover effect for gallery*/
+.contain:hover .gallery_item {
+    transform: scale(1.1);
+    overflow: hidden;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+}
+
+.img-thumbnail {
+    border: 0;
+}
+
+/** colaboration **/
+.coloboration {
+    margin-top: 25px;
+    justify-content: center; /* Контейнери всередині header .row центруються по основній осі (горизонтально) */
+    align-items: center; /* Контейнер всередині header .row центрується по поперечній осі (вертикально) */
+
+}
+
+.coloboration-user {
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.4em;
+}
+
+.snip1515 {
+    font-family: 'Roboto', Arial, sans-serif;
+    position: relative;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4em;
+    font-size: 14px;
+    box-shadow: none !important;
+}
+
+.snip1515 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.snip1515 .profile-image {
+    display: inline-block;
+    width: 80%;
+    z-index: 1;
+    position: relative;
+    padding: 10px;
+    border: 2px solid #a39a93;
+}
+
+.snip1515 .profile-image img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.snip1515 figcaption {
+    width: 100%;
+    background-color: #F2F2F2;
+    color: #555;
+    padding: 125px 25px 25px;
+    margin-top: -100px;
+    display: inline-block;
+}
+
+.snip1515 h2,
+.snip1515 h3,
+.snip1515 h4,
+.snip1515 p {
+    margin: 0 0 5px;
+}
+
+.snip1515 h2 {
+    font-weight: 500;
+    font-size: 3em;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.snip1515 h3 {
+    font-weight: 400;
+    font-size: 1.3em;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.snip1515 h4 {
+    color: #8c8c8c;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.snip1515 p {
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.snip1515 .icons {
+    text-align: center;
+    width: 100%;
+}
+
+.snip1515 i {
+    padding: 10px 5px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: normal;
+    color: #a39a93;
+    opacity: 0.75;
+}
+
+.snip1515 i:hover {
+    opacity: 1;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.coloboration-user * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.coloboration-user img {
+    max-width: 100%;
+    vertical-align: top;
+    opacity: 0.85;
+}
+
+.coloboration-user figcaption {
+    height: 150px;
+    padding: 10px;
+    background-color: #141414;
+    position: relative;
+}
+
+.coloboration-user figcaption a {
+    padding: 5px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    margin: 10px 0;
+    display: inline-block;
+    opacity: 0.65;
+    width: 47%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.coloboration-user figcaption a:hover {
+    opacity: 1;
+}
+
+.coloboration-user .profile {
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 25px;
+    z-index: 1;
+    max-width: 90px;
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.coloboration-user .follow {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    border-color: #DDD;
+    color: #DDD;
+}
+
+.follow {
+    right: 0;
+    left: 0;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+}
+
+.coloboration-user h2 {
+    margin: 0 0 5px;
+    font-weight: 300;
+}
+
+.coloboration-user h2 span {
+    display: block;
+    font-size: 0.5em;
+    color: #DDD;
+}
+
+.coloboration-user p {
+    margin: 0 0 10px;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/**************************************/
+/* Зміна властивостей для breakpoints */
+/**************************************/
+
+@media screen and (max-width: 575px) {
+    .container,
+    .navbar {
+        padding-left: 15px; /* Для Small додати відступи */
+        padding-right: 15px; /* зліва та справа у .container та .navbar */
+    }
+
+    /* Приклад зміни відступів зверху, знизу для секцій на Small екранах */
+    section {
+        padding: 35px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    /* Приклад зміни відступів зверху, знизу для секцій на Small екранах */
+    section {
+        padding: 35px;
+    }
+
+}
